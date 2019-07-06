@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DESKTOP-KRVJR70</Machine>
+    <WindowsUser>olegm</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>ffbc5210-effb-4c71-b55f-94fbb053e5c8</PackageIdentityName>
+    <PackageIdentityPublisher>CN=olegm</PackageIdentityPublisher>
+    <IntermediateOutputPath>F:\Programming\JS\MyWebPage\MyWebPage\bld\Debug\</IntermediateOutputPath>
+    <RemoteDeploymentType>
+    </RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>
+    </WindowsSdkPath>
+    <LayoutDir>F:\Programming\JS\MyWebPage\MyWebPage\bin\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>E804D1A70B51C1CE90B6482F73141C2024F573BAA5A8FFC28D5DFEB5F0CBD477</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>ffbc5210-effb-4c71-b55f-94fbb053e5c8_1.0.0.0_neutral__bbhzpzpwkenfy</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>ffbc5210-effb-4c71-b55f-94fbb053e5c8_bbhzpzpwkenfy!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>ffbc5210-effb-4c71-b55f-94fbb053e5c8</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=olegm</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="F:\Programming\JS\MyWebPage\MyWebPage\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-07-05T11:05:59.248</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="F:\Programming\JS\MyWebPage\MyWebPage\index.html">
+      <PackagePath>index.html</PackagePath>
+      <Modified>2019-07-06T13:43:58.616</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Programming\JS\MyWebPage\MyWebPage\images\LockScreenLogo.scale-200.png">
+      <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>
+      <Modified>2019-02-13T08:17:00.116</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Programming\JS\MyWebPage\MyWebPage\images\SplashScreen.scale-200.png">
+      <PackagePath>images\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-02-13T08:17:00.116</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Programming\JS\MyWebPage\MyWebPage\images\Square150x150Logo.scale-200.png">
+      <PackagePath>images\Square150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-02-13T08:17:00.116</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Programming\JS\MyWebPage\MyWebPage\images\Square44x44Logo.scale-200.png">
+      <PackagePath>images\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-02-13T08:17:00.116</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Programming\JS\MyWebPage\MyWebPage\images\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>images\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-02-13T08:17:00.116</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Programming\JS\MyWebPage\MyWebPage\images\StoreLogo.png">
+      <PackagePath>images\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-02-13T08:17:00.116</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Programming\JS\MyWebPage\MyWebPage\images\Wide310x150Logo.scale-200.png">
+      <PackagePath>images\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-02-13T08:17:00.116</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Programming\JS\MyWebPage\MyWebPage\js\main.js">
+      <PackagePath>js\main.js</PackagePath>
+      <Modified>2019-07-06T13:48:24.831</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Programming\JS\MyWebPage\MyWebPage\css\default.css">
+      <PackagePath>css\default.css</PackagePath>
+      <Modified>2019-07-06T13:19:58.281</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Programming\JS\MyWebPage\MyWebPage\bin\Debug\ReverseMap\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2019-07-05T11:05:58.819</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

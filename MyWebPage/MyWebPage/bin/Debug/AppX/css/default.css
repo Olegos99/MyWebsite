@@ -1,0 +1,109 @@
+﻿/* {
+    margin: 0;
+    padding:0;
+}
+    
+
+.wrapper {
+    margin: 0 auto;
+    width: 1000px;
+}
+    */
+p.relative {
+    text-align: center;
+    margin-top: 50px;
+}
+.name {
+    text-align: center;
+}
+
+img.MyPhoto {
+    transform: rotate(270deg);
+    width: 400px;
+    height: 250px;
+    background-image: url(images/20180212_211415.jpg);
+    background-size: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.DarkModeButton {
+    background-color: white;
+    border: 3px solid black;
+    color: black;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 5px 3px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 0px;
+    margin-top: 0px;
+    border-radius: 100%;
+}
+.button1 {
+    background-color: white;
+    border: 2px solid #4CAF50;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-left: 30px;
+    margin-right: auto;
+    margin-top: 40px;
+    border-radius: 50%;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+    .button1:hover {
+        background-color: #15dd25;
+        color: white;
+    }
+.button2 {
+    background-color: white;
+    border: 2px solid #ff0000;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    border-radius: 50%;
+}
+.button2:hover {
+    background-color: #ff0000;
+    color: black;
+}
+.button3 {
+    background-color: white;
+    border: 2px solid #ffd800;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: 40px;
+    border-radius: 50%;
+}
+    .button3:hover {
+        background-color: #ffd800;
+        color: black;
+    }
