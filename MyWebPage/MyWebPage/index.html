@@ -8,21 +8,21 @@
         nav {
             width: 100%;
             display: flex;
-            margin-top: 100px;
+            margin-top: 50px;
             justify-content: space-between;
             } 
     </style>
 </head>
-<body class="body" style="background: url('images/day.jpg') no-repeat " width=100% height=100%>
+<body class="body" style="background: url('images/175910.jpg') no-repeat " width=100% height=100%>
 
-    <button class="DarkModeButton" onclick="DarkMode()">DarkMode</button>
+
+
+    <button class="DarkModeButton" onclick="DarkMode()" id="1">DarkMode</button>
     <div class="name">
-        <h1> Oleg Magarill</h1>
+        <h1> Oleg Magarill </h1>
     </div>
-
-
     <img class="MyPhoto" src=" images/20180212_211415.jpg " alt=" Oleg Magarill" />
-    <nav>
+    <nav id ="3ButtonsNav">
         <!-- <a href="#"><button class="button1">Button1</button></a>
              <a href="#"><button class="button2">Button2</button></a>
              <a href="#"><button class="button3">Button3</button></a>
@@ -31,12 +31,21 @@
                 <button class="button2" onclick="SecondPage()">Button2</button>
                 <button class="button3" onclick="ThirdPage()">Button3</button>
         -->
-        <button class="button1">Button1</button>
-        <button class="button2">Button2</button>
-        <button class="button3">Button3</button>
+        <button class="button GreenBorder bouncy" onclick="OnButton1Click()">About me</button>
+        <button class="button BlueBorder bouncy" onclick="OnButton2Click()" style="animation-delay:0.07s">My Projects</button>
+        <button class="button RedBorder bouncy" onclick="OnButton3Click()" style="animation-delay:0.14s">Contact Me</button>
     </nav>
+<!-- 
+    <nav>
+        <button class="button1 bouncy">Facebark</button>
+        <button class ="button1 bouncy" style="animation-delay:0.07s">SJWHub</button>
+        <button class ="button1 bouncy" style="animation-delay:0.14s">Plebbit</button>
+        <button class ="button1 bouncy" style="animation-delay:0.21s">4chin</button>
+        </nav> -->
     <p class="relative"> This is some text on my firs page!</p>
     <p class="relative"> This is some more simple text on my firs page!</p>
+
+
     <script src="js/main.js"></script>
 </body>
 </html>
