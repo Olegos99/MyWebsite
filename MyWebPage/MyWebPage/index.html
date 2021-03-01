@@ -1,9 +1,11 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8" />
     <title>MyWebPage</title>
     <link href="css/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         nav {
             width: 100%;
@@ -11,41 +13,47 @@
             margin-top: 50px;
             justify-content: space-between;
             } 
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
     </style>
 </head>
+
 <body class="body" style="background: url('images/175910.jpg') no-repeat " width=100% height=100%>
 
+    <div class="navbar" id = "myTopnav">
+        <a href="javascript:void(0);" class="icon" onclick="HideAndUnhideIcons()">
+            <i class="fa fa-bars"></i>
+          </a>
+        <a id = "PageButton1" class="active" href="#" onclick = "return show('Page1','Page2')">Personal Info</a>
+        <a id = "PageButton2" class="Notactive" href="#" onclick="return show('Page2','Page1')"> Show page 2</a>
+        <a href="https://olegos.itch.io/" >My itch.io profile</a>
 
+        <name class="PlaceInTheMiddle"> <h3>Oleg Magarill </h3></name>
 
-    <button class="DarkModeButton" onclick="DarkMode()" id="1">DarkMode</button>
-    <div class="name">
-        <h1> Oleg Magarill </h1>
-    </div>
+        <b href="#DarkModeButton" class="DarkModeButton" onclick="DarkMode()" id="1"> DarkMode </b>
+      </div>
+      <main id = "Page1">
+
     <img class="MyPhoto" src=" images/20180212_211415.jpg " alt=" Oleg Magarill" />
     <nav id ="3ButtonsNav">
-        <!-- <a href="#"><button class="button1">Button1</button></a>
-             <a href="#"><button class="button2">Button2</button></a>
-             <a href="#"><button class="button3">Button3</button></a>
-
-                <button class="button1" onclick="FirstPage()">Button1</button>
-                <button class="button2" onclick="SecondPage()">Button2</button>
-                <button class="button3" onclick="ThirdPage()">Button3</button>
-        -->
         <button class="button GreenBorder bouncy" onclick="OnButton1Click()">About me</button>
         <button class="button BlueBorder bouncy" onclick="OnButton2Click()" style="animation-delay:0.07s">My Projects</button>
         <button class="button RedBorder bouncy" onclick="OnButton3Click()" style="animation-delay:0.14s">Contact Me</button>
     </nav>
-<!-- 
-    <nav>
-        <button class="button1 bouncy">Facebark</button>
-        <button class ="button1 bouncy" style="animation-delay:0.07s">SJWHub</button>
-        <button class ="button1 bouncy" style="animation-delay:0.14s">Plebbit</button>
-        <button class ="button1 bouncy" style="animation-delay:0.21s">4chin</button>
-        </nav> -->
+
     <p class="relative"> This is some text on my firs page!</p>
     <p class="relative"> This is some more simple text on my firs page!</p>
 
+</main>
 
+<main id = "Page2">
+
+
+
+</main>
     <script src="js/main.js"></script>
 </body>
 </html>

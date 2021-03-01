@@ -15,6 +15,8 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
     position: sticky;
 }
 
@@ -44,25 +46,27 @@ img.MyPhoto {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 .DarkModeButton {
      background-color: var(--ButtonBackGround); 
      /* background-image:transparent "#1e1e1e url(images/StoreLogo.png) no-repeat";  */
-     border: 3px solid var(--black); 
+     /*border: 3px solid var(--black); */
     color:var(--textColor);
-    padding: 5px 5px;
     text-align: center;
     text-decoration: none;
-    display: block;
     font-size: 16px;
     margin: 5px 3px;
     cursor: pointer;
     margin-left: auto;
-    margin-right: 0px;
-    margin-top: 0px;
-    border-radius: 100%;
+    margin-right: 5px;
+    margin-top: 5px;
+
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-0%, -50%);
 }
 .button {
     background-color: var(--ButtonBackGround);
@@ -143,3 +147,132 @@ img.MyPhoto {
                 color:var(--textColor);
                 padding: 5px 15px;
               }
+
+
+
+              /* The navigation bar */
+
+
+  
+  /* Main content */
+  .main {
+    margin-top: 50px; /* Add a top margin to avoid content overlay */
+  }
+
+  h3{
+    color: white;
+    margin: auto;
+  }
+  .navbar {
+    display: flex;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    float: left;
+    display: flex;
+    align-items: center;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+
+  .navbar a.active {
+    background-color: #4CAF50;
+    color: #f2f2f2;
+  }
+
+  .navbar a.Notactive {
+    color: white;
+  }
+
+  .navbar b {
+    float: right;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .navbar .name {
+    color: #f2f2f2;
+    text-align: center;
+    align-items: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin: auto;
+  }
+
+  
+  /* Change background on mouse-over */
+  .navbar a:hover {
+    background: #ddd;
+    color: black;
+  }
+
+  .PlaceInTheMiddle {
+    /* Center vertically and horizontally */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+
+  .navbar .icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 930px) {
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+      float: left;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 930px) {
+    .navbar.responsive 
+    {
+        left: 0;
+        top: 0;
+        position: fixed;
+        display: list-item;
+        background-color: #333;
+    }
+    .navbar.responsive .icon {
+      left: 0;
+      top: 0;
+      float: none;
+      display: block;
+      text-align: left;
+      margin-right: 90%;
+    }
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+        margin-right: 70%;
+    }
+
+    .navbar.responsive .PlaceInTheMiddle 
+    {
+        top: 10%;
+    }
+
+    .navbar.responsive .DarkModeButton
+    {
+        top: 10%;
+    } 
+  }
