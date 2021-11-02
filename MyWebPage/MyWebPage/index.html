@@ -4,8 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8" />
     <title>MyWebPage</title>
-    <link href="css/default.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/default.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         nav {
             width: 100%;
@@ -19,6 +19,10 @@ body {
 }
 
     </style>
+    <!-- <script src="./jsm/geometries/ConvexGeometry.js" type="text/javascript"></script> -->
+    
+     <!-- <script src="js/OrbitControls.js" type="module"></script> -->
+    <!-- <script src="js/ConvexGeometry.js" type="module"></script>  -->
 </head>
 
 <body class="body" style="background: url('images/175910.jpg') no-repeat " width=100% height=100%>
@@ -35,6 +39,8 @@ body {
 
         <b href="#DarkModeButton" class="DarkModeButton" onclick="DarkMode()" id="1"> DarkMode </b>
       </div>
+
+      
       <main id = "Page1">
 
     <img class="MyPhoto" src=" images/20180212_211415.jpg " alt=" Oleg Magarill" />
@@ -50,9 +56,196 @@ body {
 </main>
 
 <main id = "Page2">
+    
+        <PlayField>
+            <nav id ="3ButtonsNav">
+                <button class="button GreenBorder bouncy" onclick="OnButton1Click()">About me</button>
+                <button class="button BlueBorder bouncy" onclick="OnButton2Click()" style="animation-delay:0.07s">My Projects</button>
+                <button class="button RedBorder bouncy" onclick="OnButton3Click()" style="animation-delay:0.14s">Contact Me</button>
+            </nav>  
+
+<script type = "module">
 
 
+//import * as THREE from 'js/three.module.js';
+import * as THREE from 'https://cdn.skypack.dev/three@0.131.1';
 
+import { OrbitControls } from '../js/OrbitControls.js';
+//import { OrbitControls } from 'https://gist.github.com/jonathanlurie/bcedf6153a33ec64ab0f7c45e4e6fb70';
+
+// import { ConvexGeometry } from './js/geometries/ConvexGeometry.js';
+// import { BufferGeometryUtils } from './jsm/utils/BufferGeometryUtils.js';
+
+// let group, camera, scene, renderer;
+
+// init();
+// animate();
+
+// function init() {
+
+
+    // scene = new THREE.Scene();
+
+    // renderer = new THREE.WebGLRenderer( { antialias: true } );
+    // renderer.setPixelRatio( window.devicePixelRatio );
+    // renderer.setSize( window.innerWidth, window.innerHeight );
+    // document.body.appendChild( renderer.domElement );
+
+    // // camera
+
+    // camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 1000 );
+    // camera.position.set( 15, 20, 30 );
+    // scene.add( camera );
+
+    // controls
+
+    // const controls = new OrbitControls( camera, renderer.domElement );
+    // controls.minDistance = 20;
+    // controls.maxDistance = 50;
+    // controls.maxPolarAngle = Math.PI / 2;
+
+    // ambient light
+
+    // scene.add( new THREE.AmbientLight( 0x222222 ) );
+
+    // // point light
+
+    // const light = new THREE.PointLight( 0xffffff, 1 );
+    // camera.add( light );
+
+    // // helper
+
+    // scene.add( new THREE.AxesHelper( 20 ) );
+
+    // const geometry = new THREE.BoxGeometry();
+    // const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+    // const cube = new THREE.Mesh( geometry, material );
+    // scene.add( cube );
+
+
+    // // textures
+
+    // // const loader = new THREE.TextureLoader();
+    // // const texture = loader.load( 'images/night0.jpg' );
+
+    // group = new THREE.Group();
+    // scene.add( group );
+
+    // // points
+
+    // let dodecahedronGeometry = new THREE.DodecahedronGeometry( 10 );
+
+    // // if normal and uv attributes are not removed, mergeVertices() can't consolidate indentical vertices with different normal/uv data
+
+    // dodecahedronGeometry.deleteAttribute( 'normal' );
+    // dodecahedronGeometry.deleteAttribute( 'uv' );
+
+    // // dodecahedronGeometry = BufferGeometryUtils.mergeVertices( dodecahedronGeometry );
+
+    // const vertices = [];
+    // const positionAttribute = dodecahedronGeometry.getAttribute( 'position' );
+
+    // for ( let i = 0; i < positionAttribute.count; i ++ ) {
+
+    //     const vertex = new THREE.Vector3();
+    //     vertex.fromBufferAttribute( positionAttribute, i );
+    //     vertices.push( vertex );
+
+    // }
+
+    // const pointsMaterial = new THREE.PointsMaterial( {
+
+    //     color: 0x0080ff,
+    //     map: texture,
+    //     size: 1,
+    //     alphaTest: 0.5
+
+    // } );
+
+    // // const pointsGeometry = new THREE.BufferGeometry().setFromPoints( vertices );
+
+    // const points = new THREE.Points( pointsGeometry, pointsMaterial );
+    // group.add( points );
+
+    // // convex hull
+
+    // const meshMaterial = new THREE.MeshLambertMaterial( {
+    //     color: 0xffffff,
+    //     opacity: 0.5,
+    //     transparent: true
+    // } );
+
+    // // const meshGeometry = new ConvexGeometry( vertices );
+
+    // // const mesh1 = new THREE.Mesh( meshGeometry, meshMaterial );
+    // mesh1.material.side = THREE.BackSide; // back faces
+    // mesh1.renderOrder = 0;
+    // group.add( mesh1 );
+
+    // // const mesh2 = new THREE.Mesh( meshGeometry, meshMaterial.clone() );
+    // mesh2.material.side = THREE.FrontSide; // front faces
+    // mesh2.renderOrder = 1;
+    // group.add( mesh2 );
+
+    //
+
+    window.addEventListener( 'resize', onWindowResize );
+
+// }
+
+const scene = new THREE.Scene();
+			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+			const renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.body.appendChild( renderer.domElement );
+
+			const geometry = new THREE.BoxGeometry();
+			const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+			const cube = new THREE.Mesh( geometry, material );
+			scene.add( cube );
+
+			camera.position.z = 5;
+
+			const animate = function () {
+				requestAnimationFrame( animate );
+
+				cube.rotation.x += 0.01;
+				cube.rotation.y += 0.01;
+
+				renderer.render( scene, camera );
+			};
+
+			animate();
+
+function onWindowResize() {
+
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize( window.innerWidth, window.innerHeight );
+
+}
+
+// function animate() {
+
+//     requestAnimationFrame( animate );
+
+//     group.rotation.y += 0.005;
+
+//     render();
+
+// }
+
+function render() {
+
+    renderer.render( scene, camera );
+
+}
+
+
+</script>
+        </PlayField>
 </main>
     <script src="js/main.js"></script>
 </body>

@@ -7,6 +7,8 @@ let h;
 let IsNavPanelMenuAreVisible = false;
 let ActivePageTag = 1;
 
+show('Page1','Page2');
+
 function DarkMode() {
     if (!IsitDarckMode) {
         document.body.style.background = "#1e1e1e url('images/night.jpg') no-repeat "; 
@@ -130,6 +132,7 @@ if(shown == "Page2" && ActivePageTag != 2)
 ActivePageTag = 2;
 document.getElementById("PageButton1").className = "Notactive";
 document.getElementById("PageButton2").className = "active";
+
 }
   
     return false;
